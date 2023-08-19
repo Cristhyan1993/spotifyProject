@@ -1,10 +1,14 @@
 import React from "react";
 
-export default function SearchBar() {
+
+export default function SearchBar(props) {
+
+  function handleSearch () {
+    props.searchAlbum()
+  }
   return (
     <div>
-      <input type="text" />
-      <button>Search</button>
+      <button onClick={handleSearch}>Search</button>
     </div>
   );
 }
